@@ -280,3 +280,50 @@
 **中文：** 一个游戏中有大量相似的怪物，创建新怪物时可以复制现有怪物模板然后修改部分属性。请用Prototype模式画出类图，展示Monster类如何实现clone()方法。
 
 **Deutsch:** In einem Spiel gibt es viele ähnliche Monster. Beim Erstellen neuer Monster kann man eine Vorlage kopieren und einzelne Eigenschaften ändern. Zeichne ein Klassendiagramm, das zeigt, wie die Monster-Klasse clone() implementiert.
+
+
+## MVC 模式 / Model-View-Controller
+
+#### 题目1 / Aufgabe 1
+
+**中文：** 设计一个简单的学生成绩管理系统。Model存储学生姓名和成绩，View负责在界面上显示学生信息，Controller处理用户的操作（如添加成绩、修改成绩）。请画出MVC模式的类图，标明：
+
+- Model（StudentModel）：包含name、score属性和getter/setter方法
+- View（StudentView）：包含displayStudentDetails()方法
+- Controller（StudentController）：持有Model和View的引用，包含updateScore()和updateView()方法
+- 用箭头标明三者之间的依赖关系
+
+**Deutsch:** Entwirf ein einfaches Notenverwaltungssystem für Studenten. Das Model speichert Name und Note des Studenten, die View zeigt die Studenteninformationen auf der Oberfläche an, der Controller verarbeitet Benutzeraktionen (Note hinzufügen, Note ändern). Zeichne ein MVC-Klassendiagramm mit:
+
+- Model (StudentModel): Attribute name, score und getter/setter-Methoden
+- View (StudentView): Methode displayStudentDetails()
+- Controller (StudentController): hält Referenzen auf Model und View, enthält updateScore() und updateView()
+- Markiere die Abhängigkeiten zwischen den drei Komponenten mit Pfeilen
+
+---
+
+#### 题目2 / Aufgabe 2
+
+**中文：** 设计一个简单的音乐播放器应用。请用MVC模式画出类图，包含：
+
+- Model（MusicModel）：存储当前歌曲名称、播放状态（播放/暂停）、音量
+- View（PlayerView）：显示歌曲信息、播放按钮状态、音量条
+- Controller（PlayerController）：处理用户点击播放/暂停按钮、调节音量的操作
+
+请标明：
+
+1. 各个类的主要属性和方法
+2. Controller如何更新Model
+3. Model变化后如何通知View更新（可以结合Observer模式）
+
+**Deutsch:** Entwirf eine einfache Musik-Player-Anwendung. Zeichne ein MVC-Klassendiagramm mit:
+
+- Model (MusicModel): speichert aktuellen Songnamen, Wiedergabestatus (Play/Pause), Lautstärke
+- View (PlayerView): zeigt Songinfo, Play-Button-Status, Lautstärkeregler
+- Controller (PlayerController): verarbeitet Benutzerklicks auf Play/Pause und Lautstärkeregelung
+
+Markiere:
+
+1. Die wichtigsten Attribute und Methoden jeder Klasse
+2. Wie der Controller das Model aktualisiert
+3. Wie das Model die View über Änderungen benachrichtigt (kann mit Observer-Muster kombiniert werden)
